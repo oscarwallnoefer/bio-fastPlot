@@ -1,12 +1,12 @@
 # molecular PCA
 
-# install.packages(c("adegenet", "ggplot2", "ggrepel"))
+# install.packages(c("adegenet", "ggplot2", "factoextra"))
 library(adegenet)
 library(ggplot2)
 library(ggrepel)
 
 # ! Mandatorial
-fasta_file <- "genes.fasta"
+fasta_file <- "concatenated.out"
 # change with your own input file
 # genes.fasta: a fasta file containing the aligned sequences of your species
 
@@ -47,18 +47,27 @@ if (has_groups) {
 ggplot(pca_df, aes(x = PC1, y = PC2, color = Group, label = Species)) +
   geom_point(size = 2) +
   scale_color_manual(values = group_to_color, breaks = names(group_to_color)[names(group_to_color) != "Unassigned"]) +
-  geom_text_repel(max.overlaps = Inf, show.legend = FALSE,
+  geom_text_repel(max.overlaps = Inf, show.legend = FALSE, 
     aes(label = Species),
+    size = 3,
     box.padding = 0.2, #space around the text label
     point.padding = 0.3, #space around the point
     segment.color = "grey50",
-    segment.size = 0.3) +
+    segment.size = 0.3,
+    min.segment.length = 0.2) + # define min distance to draw a segment
   scale_x_continuous(expand = expansion(mult = 0.2)) +
   scale_y_continuous(expand = expansion(mult = 0.2)) +
   theme_minimal() +
+  theme(
+  text = element_text(family = "Helvetica Neue"), # font family
+  axis.title = element_text(size = 10),  # es. PC1, PC2
+  axis.text  = element_text(size = 10),  # es. 0.1, 0.2, 0.3
+  plot.title = element_text(size = 10),  # title
+  legend.text = element_text(size = 10), # legend text
+  legend.title = element_text(size = 10)
+  ) +
   theme(panel.grid = element_blank(), axis.line = element_line(color = "black"), axis.ticks = element_line(color = "black")) +
-  labs(title = "", x = paste0("PC1 (", round(variance_explained[1], 1), "%)"), y = paste0("PC2 (", round(variance_explained[2], 1), "%)"))
+  labs(title = "Molecular PCA - mtOXPHOS Squamata", x = paste0("PC1 (", round(variance_explained[1], 1), "%)"), y = paste0("PC2 (", round(variance_explained[2], 1), "%)"))
 
-# save
-#ggsave("molPCA.png", width = 8, height = 6, dpi = 300)
+ggsave("molPCA.png", width = 5, height = 4, dpi = 300)
 #ggsave("molPCA.svg", width = 8, height = 6)
