@@ -14,10 +14,6 @@ Molecular PCA from an aligned FASTA file, with optional group coloring from a CS
 
 <img src="molPCA.png" width="100%">
 
-</td>
-</tr>
-</table>
-
 <tr>
 <td width="50%">
 
@@ -32,3 +28,4 @@ Flags taxa that are outliers on any statistic column from a summary table (e.g. 
 
 </td>
 </tr>
+</table>
