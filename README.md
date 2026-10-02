@@ -17,9 +17,9 @@ Molecular PCA from an aligned FASTA file, with optional group coloring from a CS
 <tr>
 <td width="50%">
 
-### taxonOutliers
+### taxonOutliers.R
 
-Flags taxa that are outliers on any statistic column from a summary table (e.g. `AMAS.py summary`), labeling them directly on the plot. Optionally, with a `groups.csv`, it compares groups via horizontal boxplots instead. ![in progress]
+Flags taxa that are outliers on any statistic column from a summary table (e.g. `AMAS.py summary`), labeling them directly on the plot. Optionally, with a `groups.csv`, it compares groups via horizontal boxplots instead. This script will be updated to allow different inputs.
 
 </td>
 <td width="50%">
