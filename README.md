@@ -1,16 +1,18 @@
+# fastPlot
+Simple scripts for everyday bioinformatics plots.
 
-<table>
+<table width="100%">
 <tr>
-<td>
+<td width="50%">
 
 ### molPCA
 
 Molecular PCA from an aligned FASTA file, with optional group coloring from a CSV.
 
 </td>
-<td width="350">
+<td width="50%">
 
-<img src="molPCA.png" width="300">
+<img src="molPCA.png" width="100%">
 
 </td>
 </tr>
