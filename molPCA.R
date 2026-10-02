@@ -59,3 +59,6 @@ ggplot(pca_df, aes(x = PC1, y = PC2, color = Group, label = Species)) +
   theme(panel.grid = element_blank(), axis.line = element_line(color = "black"), axis.ticks = element_line(color = "black")) +
   labs(title = "", x = paste0("PC1 (", round(variance_explained[1], 1), "%)"), y = paste0("PC2 (", round(variance_explained[2], 1), "%)"))
 
+# save
+#ggsave("molPCA.png", width = 8, height = 6, dpi = 300)
+#ggsave("molPCA.svg", width = 8, height = 6)
