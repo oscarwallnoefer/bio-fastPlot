@@ -1,4 +1,4 @@
-# fastPlot
+# bio-fastPlot
 Simple scripts for everyday bioinformatics plots.
 
 <table width="100%">
@@ -28,4 +28,30 @@ Flags taxa that are outliers on any statistic column from a summary table (e.g. 
 
 </td>
 </tr>
+
+<tr>
+<td width="50%">
+
+### codonSaturation.R
+
+A substitution-saturation plot: pairwise corrected vs. observed genetic distances, computed separately for each codon position from an aligned coding-sequence FASTA file. A quick, assumption-free way to see whether the third base is saturated.
+
+</td>
+<td width="50%">
+
+<img src="codonSaturation.png" width="100%">
+
+<tr>
+<td width="50%">
+
+
+
+
+
+
+
+
 </table>
+
+
+
