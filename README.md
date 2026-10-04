@@ -1,6 +1,3 @@
-# bio-fastPlot
-Simple scripts for everyday bioinformatics plots.
-
 <table width="100%">
 <tr>
 <td width="50%">
@@ -13,6 +10,9 @@ Molecular PCA from an aligned FASTA file, with optional group coloring from a CS
 <td width="50%">
 
 <img src="molPCA.png" width="100%">
+
+</td>
+</tr>
 
 <tr>
 <td width="50%">
@@ -41,17 +41,6 @@ A substitution-saturation plot: pairwise corrected vs. observed genetic distance
 
 <img src="codonSaturation.png" width="100%">
 
-<tr>
-<td width="50%">
-
-
-
-
-
-
-
-
+</td>
+</tr>
 </table>
-
-
-
