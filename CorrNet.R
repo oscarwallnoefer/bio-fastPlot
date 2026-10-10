@@ -95,3 +95,10 @@ df    <- load_edges(infile)
 edges <- filter_edges(df, r_min, fdr_max, sign)
 g     <- build_graph(edges)
 plot_graph(g, labels)
+
+# Save the plot as PNG (same figure as the window: the Kamada-Kawai layout is deterministic)
+png("corrNetwork.png", width = 6, height = 6, units = "in", res = 300)
+plot_graph(g, labels)
+dev.off()
+#svg("corrNetwork.svg", width = 8, height = 8); plot_graph(g, labels); dev.off()
+
