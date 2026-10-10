@@ -46,4 +46,19 @@ A substitution-saturation plot: pairwise corrected vs. observed genetic distance
 
 </td>
 </tr>
+
+<tr>
+<td width="50%">
+
+### CorrNet.R
+
+A correlation network from a table of pairwise Pearson/Spearman/other correlations (gene1, gene2, r, p-value): only the pairs passing an |r| and an p-value threshold are kept, with edges coloured by the sign of the correlation and each separate network highlighted by a shaded area. A quick way to see how the network structure changes as the thresholds move, and how genes (or any trait) covariate with others.
+
+</td>
+<td width="50%">
+
+<img src="corrNetwork.png" width="100%">
+
+</td>
+</tr>
 </table>
