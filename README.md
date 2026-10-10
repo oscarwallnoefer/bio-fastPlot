@@ -57,7 +57,7 @@ A correlation network from a table of pairwise Pearson/Spearman/other correlatio
 </td>
 <td width="50%">
 
-<img src="corrNetwork.png" width="100%">
+<img src="CorrNet.png" width="100%">
 
 </td>
 </tr>
